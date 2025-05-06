@@ -109,7 +109,7 @@ public class Main extends JFrame {
         groupDescription.setFont(NORMAL_FONT);
         groupDescription.setLineWrap(true);
         groupDescription.setWrapStyleWord(true);
-        groupDescription.setEditable(false);
+        groupDescription.setEditable(true);
         JScrollPane descScroll = new JScrollPane(groupDescription);
         descScroll.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
         
@@ -185,7 +185,7 @@ public class Main extends JFrame {
         coordTableModel = new DefaultTableModel(columnNames, 0) {
             @Override
             public boolean isCellEditable(int row, int column) {
-                return false; // Make table read-only
+                return true; // Make table read-only
             }
         };
         
@@ -194,7 +194,7 @@ public class Main extends JFrame {
         coordTable.setRowHeight(25);
         coordTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         coordTable.getTableHeader().setFont(HEADER_FONT);
-        coordTable.getTableHeader().setBackground(PRIMARY_COLOR);
+        coordTable.getTableHeader().setBackground(SECONDARY_COLOR);
         coordTable.getTableHeader().setForeground(Color.WHITE);
         
         JScrollPane tableScroll = new JScrollPane(coordTable);
