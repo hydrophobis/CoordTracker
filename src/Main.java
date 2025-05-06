@@ -786,7 +786,7 @@ public class Main extends JFrame {
     public static void main(String[] args) {
         try {
             // Set system look and feel
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
         } catch (Exception e) {
             // Fall back to default look and feel
         }
